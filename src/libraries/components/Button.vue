@@ -33,8 +33,8 @@ const emit = defineEmits<{
 
 const sizeStyles = {
   sm: 'px-2.5 py-1.5 text-sm',
-  md: 'px-3 py-2 text-base',
-  lg: 'px-4 py-2.5 text-lg'
+  md: 'px-3 py-2 text-sm font-normal',
+  lg: 'px-4 py-2.5 text-base font-semibold'
 }
 
 const colorStyles = {
@@ -85,7 +85,7 @@ const colorStyles = {
 const disabledStyles = 'opacity-50 cursor-not-allowed pointer-events-none'
 
 const computedClasses = computed(() => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none'
+  const baseClasses = 'font-sans inline-flex items-center justify-center rounded-md transition-colors focus:outline-none'
   const sizeClass = sizeStyles[props.size]
   const colorClass = colorStyles[props.color][props.variant]
   const disabledClass = (props.disabled || props.loading) ? disabledStyles : ''

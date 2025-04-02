@@ -25,10 +25,10 @@ const levelStyles = {
   'title-lg': 'text-xl font-semibold',
   'title-md': 'text-lg font-semibold',
   'title-sm': 'text-base font-semibold',
-  'body-lg': 'text-lg',
-  'body-md': 'text-base',
-  'body-sm': 'text-sm',
-  'body-xs': 'text-xs'
+  'body-lg': 'text-base font-normal',
+  'body-md': 'text-sm font-normal',
+  'body-sm': 'text-sm font-normal',
+  'body-xs': 'text-xs font-normal'
 }
 
 const colorStyles = {

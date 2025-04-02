@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto space-y-4">
     <section class="space-y-4">
       <h2 class="text-2xl font-bold mb-4">Headings</h2>
       <div class="space-y-2">

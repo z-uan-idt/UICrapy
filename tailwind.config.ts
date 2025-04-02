@@ -11,8 +11,29 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'sm': ['14px', '18px'],
+        'base': ['16px', '1.55'],
+        'lg': ['18px', '28px'],
+        'xl': ['20px', '32px'],
+        '2xl': ['24px', '36px'],
+        '3xl': ['32px', '48px'],
+        '4xl': ['40px', '64px'],
+        '5xl': ['48px', '72px'],
+        '6xl': ['64px', '96px'],
+        '7xl': ['80px', '120px'],
+        '8xl': ['96px', '144px'],
+      },
+      fontWeight: {
+        'normal': '400',
+        'medium': '500',
+        'semibold': '600',
+        'bold': '700',
+        'extrabold': '800',
+      },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Roboto', 'system-ui', 'sans-serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
         roboto: ['Roboto', 'system-ui', 'sans-serif'],
       },
       colors: {

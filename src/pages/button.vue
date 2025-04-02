@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const colors: ('red' | 'pink' | 'purple' | 'blue' | 'cyan' | 'teal' | 'green')[] = ['red', 'pink', 'purple', 'blue', 'cyan', 'teal', 'green']
+const sizes: ('sm' | 'md' | 'lg')[] = ['sm', 'md', 'lg']
+
 const handleClick = () => {
   console.log('Button clicked!')
 }
@@ -37,73 +40,15 @@ const handleClick = () => {
     <section class="space-y-4">
       <h2 class="text-2xl font-bold mb-4">Colors</h2>
       <div class="space-y-4">
-        <div class="space-y-2">
-          <h3 class="text-lg font-semibold">Red</h3>
-          <div class="flex flex-wrap gap-4">
-            <CuiButton color="red" variant="solid">Solid</CuiButton>
-            <CuiButton color="red" variant="soft">Soft</CuiButton>
-            <CuiButton color="red" variant="outlined">Outlined</CuiButton>
-            <CuiButton color="red" variant="plain">Plain</CuiButton>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-lg font-semibold">Pink</h3>
-          <div class="flex flex-wrap gap-4">
-            <CuiButton color="pink" variant="solid">Solid</CuiButton>
-            <CuiButton color="pink" variant="soft">Soft</CuiButton>
-            <CuiButton color="pink" variant="outlined">Outlined</CuiButton>
-            <CuiButton color="pink" variant="plain">Plain</CuiButton>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-lg font-semibold">Purple</h3>
-          <div class="flex flex-wrap gap-4">
-            <CuiButton color="purple" variant="solid">Solid</CuiButton>
-            <CuiButton color="purple" variant="soft">Soft</CuiButton>
-            <CuiButton color="purple" variant="outlined">Outlined</CuiButton>
-            <CuiButton color="purple" variant="plain">Plain</CuiButton>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-lg font-semibold">Blue</h3>
-          <div class="flex flex-wrap gap-4">
-            <CuiButton color="blue" variant="solid">Solid</CuiButton>
-            <CuiButton color="blue" variant="soft">Soft</CuiButton>
-            <CuiButton color="blue" variant="outlined">Outlined</CuiButton>
-            <CuiButton color="blue" variant="plain">Plain</CuiButton>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-lg font-semibold">Cyan</h3>
-          <div class="flex flex-wrap gap-4">
-            <CuiButton color="cyan" variant="solid">Solid</CuiButton>
-            <CuiButton color="cyan" variant="soft">Soft</CuiButton>
-            <CuiButton color="cyan" variant="outlined">Outlined</CuiButton>
-            <CuiButton color="cyan" variant="plain">Plain</CuiButton>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-lg font-semibold">Teal</h3>
-          <div class="flex flex-wrap gap-4">
-            <CuiButton color="teal" variant="solid">Solid</CuiButton>
-            <CuiButton color="teal" variant="soft">Soft</CuiButton>
-            <CuiButton color="teal" variant="outlined">Outlined</CuiButton>
-            <CuiButton color="teal" variant="plain">Plain</CuiButton>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-lg font-semibold">Green</h3>
-          <div class="flex flex-wrap gap-4">
-            <CuiButton color="green" variant="solid">Solid</CuiButton>
-            <CuiButton color="green" variant="soft">Soft</CuiButton>
-            <CuiButton color="green" variant="outlined">Outlined</CuiButton>
-            <CuiButton color="green" variant="plain">Plain</CuiButton>
+        <div v-for="color in colors" :key="color" class="space-y-2">
+          <h3 class="text-lg font-semibold">{{ color }}</h3>
+          <div class="space-x-4">
+            <template v-for="(size, index) in sizes" :key="index">
+              <CuiButton :color="color" :size="size" variant="solid">Solid</CuiButton>
+              <CuiButton :color="color" :size="size" variant="soft">Soft</CuiButton>
+              <CuiButton :color="color" :size="size" variant="outlined">Outlined</CuiButton>
+              <CuiButton :color="color" :size="size" variant="plain">Plain</CuiButton>
+            </template>
           </div>
         </div>
       </div>
@@ -155,4 +100,4 @@ const handleClick = () => {
       </div>
     </section>
   </div>
-</template> 
+</template>
