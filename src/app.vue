@@ -1,5 +1,5 @@
 <template>
-  <BaseSkeleton :loading="true">
+  <BaseSkeleton :loading="isLoading">
     <div class="min-h-screen bg-gray-50">
       <!-- Header -->
       <header class="bg-white shadow-sm">
